@@ -1,0 +1,50 @@
+.bodyWrapper{
+  width: 100%;
+  // margin-left: 20%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  grid-row-gap: 4%;
+  grid-column-gap: 4%;
+
+  
+  .rockTypeDiv{
+    width: 30vw;
+    max-height: 29vw;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    margin: 0;
+    
+    .rockTypeImg{
+      width: 150%;
+      float: right;
+    }
+  }
+}
+  
+
+
+
+ul {
+  align-items: start;
+  display: block;
+  grid-template-columns: auto;
+  grid-row-gap: 4%;
+  grid-column-gap: 4%;
+  margin: auto;
+  width: 80%;
+  // margin-left: 20%;
+  // margin-left: 50%;
+  // margin-right: 50%
+}
+  
+  li {
+    // background: #ccc;
+    list-style: none;
+    // padding: 30px;
+    // margin-right: 50px;
+    text-align: center;
+  }
+
+  
