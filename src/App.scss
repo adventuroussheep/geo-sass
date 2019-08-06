@@ -8,43 +8,107 @@
   grid-column-gap: 4%;
 
   
-  .rockTypeDiv{
-    width: 30vw;
-    max-height: 29vw;
+.rockTypeImg{
+  border-radius: 50%;
+    // height: 15vw;
+    // width: 150%;
+      // float: right;
+}
+
+
+  @mixin on-circle($item-count, $circle-size, $item-size) {  
+    position: relative;
+    width:  $circle-size;
+    height: $circle-size;
     border-radius: 50%;
-    overflow: hidden;
-    float: left;
-    margin: 0;
+    padding: 0; 
+    list-style: none;
     
-    .rockTypeImg{
-      width: 150%;
-      float: right;
+    > * {
+      display: block;
+      position: absolute;
+      top:  50%; 
+      left: 50%;
+      margin: -($item-size / 2);
+      width:  $item-size;
+      height: $item-size;
+    
+      $angle: (355 / $item-count);
+      $rot: 30;
+  
+      @for $i from 1 through $item-count {
+        &:nth-of-type(#{$i}) {
+          transform: rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+        }
+  
+        $rot: $rot + $angle;
+      }
     }
   }
-}
   
+  .circle-container {
+    @include on-circle($item-count: 3, $circle-size: 35vw, $item-size: 15vw); 
+    margin: 5em auto 0;
+    // border: solid 5px tomato;
 
 
-
-ul {
-  align-items: start;
-  display: block;
-  grid-template-columns: auto;
-  grid-row-gap: 4%;
-  grid-column-gap: 4%;
-  margin: auto;
-  width: 80%;
-  // margin-left: 20%;
-  // margin-left: 50%;
-  // margin-right: 50%
-}
+    } 
   
-  li {
-    // background: #ccc;
-    list-style: none;
-    // padding: 30px;
-    // margin-right: 50px;
-    text-align: center;
+    .rockText{
+      display:none;
+    }
+
+  .rockTypeDiv1, .rockTypeDiv2, .rockTypeDiv3 {
+    // background-color: white;
+    position: absolute;
+    top: 0px;
+    // width: 200px;
+    // height: 200px;
+    // border: 2px solid black;
+    &:hover img {
+      // border: 2px solid black;
+    // transform: translateY(-32px) scale(2);
+    // -webkit-transform: translateY(-32px) scale(2);
+    box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
+    transition-delay: .2s;
+    -webkit-transform: translateY(-48px) scale(1.4);
+           transform: translateY(-80px) scale(.5);
+  }
+}
+
+
+.hiddenDiv {
+  // background-color: #000000;
+  position: relative;
+  width: 15vw;
+  // height: 200px;
+  padding: 30px;
+  border: 2px solid green;
+  top: 0;
+  &:hover .rockTypeDiv1{
+    border: 5px solid green;
+    // display:none;
+  }
+  &:hover .rockText{
+    color: white;
+    display: inline;
   }
 
+
+    img { 
+      display: block; 
+      max-width: 100%; 
+      border: solid 1px rgba($color: #000000, $alpha: 0.4);
+      box-shadow: 5px 5px 5px;
+      transition: .15s;
+      
+
+
+        //  -webkit-transform: translateY(-32px) scale(6);
+          //  transform: translateY(-32px) scale(6);
+
+    }
   
+  }
+
+}
