@@ -11,7 +11,7 @@ function App() {
       <header className="">
         <h1>The Rock Cycle</h1>
       </header>
-      <body>
+      <div className="bodyDiv">
         <div className="bodyWrapper">
           <ul className="circle-container">
 
@@ -22,7 +22,17 @@ function App() {
           <div className="rockTypeDiv1">
             <div className="hiddenDiv">
             <img src={granite} alt="Igneous" className="rockTypeImg"></img>
-            <p className="rockText">hasdfasdfa</p>
+            <div className="rockText">
+            <h3>Igneous</h3>
+            <hr></hr>
+            <p className="">Igneous rocks are fromed when magma (below ground, intrusive) or lava (above ground, extrusive) cools. Magama can form from:
+            <br></br><br></br>
+            <b>Decompression Melting,</b> where the Earths mantle is uplifted causing a reduction in pressure and allowing the mantle too melt. 
+            <br></br><br></br>
+            Through <b>Flux Melting,</b> where water is introduced into the mantle lowering the melting point. 
+            <br></br><br></br>
+            And lastly through <b>Transfer of Heat</b> where a new heat source intrudes cold crust causing the crust to melt.</p>
+            </div>
             </div>
           </div>
             </li>
@@ -33,6 +43,7 @@ function App() {
           <div className="rockTypeDiv2">
             <div className="hiddenDiv">
             <img src={gneiss} alt="Metamorphic" className="rockTypeImg"></img>
+            <h3>Metamorphic</h3>
             <p className="rockText">hasdfasdfa</p>
           </div>
           </div>
@@ -44,7 +55,8 @@ function App() {
             <div className="rockTypeDiv3">
           <div className="hiddenDiv">
             <img src={sedimentary} alt="Sedimentary" className="rockTypeImg"></img>
-            <p className="rockText">hasdfasdfa</p>
+            <h3>Sedimentary</h3>
+            <p className="rockText">hasdfasdfa lorem</p>
           </div>
           </div>
             </li>
@@ -54,7 +66,7 @@ function App() {
         <div>
 
         </div>
-      </body>
+      </div>
     </div>
   );
 }
