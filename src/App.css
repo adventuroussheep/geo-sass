@@ -1,10 +1,6 @@
-body .rockTypeDiv1:hover body {
-  background-image: url("./assests/images/meta-bg.jpg");
-}
-
 .bodyWrapper {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto;
@@ -13,6 +9,7 @@ body .rockTypeDiv1:hover body {
       grid-template-rows: auto auto;
   grid-row-gap: 4%;
   grid-column-gap: 4%;
+  background-color: gray;
 }
 
 .bodyWrapper .rockTypeImg {
@@ -20,24 +17,23 @@ body .rockTypeDiv1:hover body {
   margin-left: 20%;
 }
 
+.bodyWrapper:hover > .bodyWrapper {
+  background-color: blue;
+}
+
 .bodyWrapper .circle-container {
-  position: relative;
+  position: absolute;
   width: 35vw;
   height: 35vw;
-  border-radius: 50%;
-  padding: 0;
-  list-style: none;
   margin: 5em auto 0;
 }
 
 .bodyWrapper .circle-container > * {
-  display: block;
+  list-style: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -7.5vw;
-  width: 15vw;
-  height: 15vw;
+  z-index: 1;
 }
 
 .bodyWrapper .circle-container > *:nth-of-type(1) {
@@ -70,9 +66,12 @@ body .rockTypeDiv1:hover body {
           transform: rotate(328.83333deg) translate(17.5vw) rotate(-328.83333deg);
 }
 
-.bodyWrapper .arrowImg1, .bodyWrapper .arrowImg2, .bodyWrapper .arrowImg3 {
+.bodyWrapper .arrowImg1,
+.bodyWrapper .arrowImg2,
+.bodyWrapper .arrowImg3 {
+  position: relative;
   width: 25vw;
-  z-index: -10;
+  z-index: 10;
 }
 
 .bodyWrapper .arrowImg2 {
@@ -96,34 +95,30 @@ body .rockTypeDiv1:hover body {
   width: 50%;
 }
 
-.bodyWrapper .rockTypeDiv1, .bodyWrapper .rockTypeDiv2, .bodyWrapper .rockTypeDiv3 {
+.bodyWrapper .rockTypeDiv1,
+.bodyWrapper .rockTypeDiv2,
+.bodyWrapper .rockTypeDiv3 {
+  position: absolute;
   top: 0px;
   width: 25vw;
   height: auto;
+  cursor: pointer;
   z-index: 90;
 }
 
-.bodyWrapper .rockTypeDiv1:hover, .bodyWrapper .rockTypeDiv2:hover, .bodyWrapper .rockTypeDiv3:hover {
-  -webkit-transition: .5s;
-  transition: .5s;
+.bodyWrapper .rockTypeDiv1:hover,
+.bodyWrapper .rockTypeDiv2:hover,
+.bodyWrapper .rockTypeDiv3:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   -webkit-box-shadow: 5px 5px 5px;
           box-shadow: 5px 5px 5px;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.bodyWrapper .rockTypeDiv1:hover img, .bodyWrapper .rockTypeDiv2:hover img, .bodyWrapper .rockTypeDiv3:hover img {
-  -webkit-box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
-          box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
-  -webkit-transition-delay: .15s;
-          transition-delay: .15s;
-  -webkit-transform: translateY(-48px) scale(1.4);
-  transform: translateY(-80px) scale(0.5);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.3)));
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.3));
-  width: 15vw;
-}
-
-.bodyWrapper .rockTypeDiv1:hover .rockText, .bodyWrapper .rockTypeDiv2:hover .rockText, .bodyWrapper .rockTypeDiv3:hover .rockText {
+.bodyWrapper .rockTypeDiv1:hover .rockText,
+.bodyWrapper .rockTypeDiv2:hover .rockText,
+.bodyWrapper .rockTypeDiv3:hover .rockText {
   display: inline;
   text-align: center;
 }
@@ -139,8 +134,8 @@ body .rockTypeDiv1:hover body {
 .bodyWrapper .hiddenDiv:hover img {
   -webkit-box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
           box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
-  -webkit-transition-delay: .15s;
-          transition-delay: .15s;
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
   -webkit-transform: translateY(-48px) scale(1.4);
   transform: translateY(-80px) scale(0.5);
 }
@@ -151,7 +146,7 @@ body .rockTypeDiv1:hover body {
   border: solid 1px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 5px 5px 5px;
           box-shadow: 5px 5px 5px;
-  -webkit-transition: .75s;
-  transition: .75s;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
 }
 /*# sourceMappingURL=App.css.map */
