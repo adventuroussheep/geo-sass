@@ -5,6 +5,15 @@
   transform: translateY(-80px) scale(0.5);
 }
 
+@mixin font-scale {
+  @media (min-width: 800px) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 2500px) {
+    font-size: 1rem;
+  }
+}
+
 @mixin on-circle($item-count, $circle-size, $item-size) {
   position: absolute;
   width: $circle-size;
@@ -91,6 +100,7 @@
     text-align: center;
     position: relative;
     bottom: 9vw;
+    @include font-scale();
     // margin-top: -200px;
 
     hr {

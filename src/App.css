@@ -96,6 +96,18 @@
   bottom: 9vw;
 }
 
+@media (min-width: 800px) {
+  .bodyWrapper .rockText {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 2500px) {
+  .bodyWrapper .rockText {
+    font-size: 1rem;
+  }
+}
+
 .bodyWrapper .rockText hr {
   width: 50%;
 }
