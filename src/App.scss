@@ -19,7 +19,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 1;
+    // z-index error location, puts index of all li too 2, .arrowLi sets arrows index too 1
+    z-index: 2;
     // margin: -($item-size / 2);
     // width: $item-size;
     // height: $item-size;
@@ -63,12 +64,18 @@
     margin: 5em auto 0;
   }
 
+  .arrowLi{
+    background-color: green;
+    position: absolute;
+    z-index: 1;
+  }
+
   .arrowImg1,
   .arrowImg2,
   .arrowImg3 {
-    position: relative;
+    // position: relative;
     width: 25vw;
-    z-index: 10;
+    z-index: 1;
   }
 
   .arrowImg2 {

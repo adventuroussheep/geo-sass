@@ -14,7 +14,7 @@ function App() {
       <div className="bodyDiv">
         <div className="bodyWrapper">
           <ul className="circle-container">
-            <li>
+            <li className="arrowLi">
               <img src={arrow} className="arrowImg1" alt="arrow" />
             </li>
             <li>
@@ -43,7 +43,7 @@ function App() {
                 </div>
               </div>
             </li>
-            <li>
+            <li className="arrowLi">
               <img src={arrow} className="arrowImg2" alt="arrow" />
             </li>
             <li>
@@ -69,7 +69,7 @@ function App() {
                 </div>
               </div>
             </li>
-            <li>
+            <li className="arrowLi">
               <img src={arrow} className="arrowImg3" alt="arrow" />
             </li>
             <li>
