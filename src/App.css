@@ -67,7 +67,6 @@
 }
 
 .bodyWrapper .arrowLi {
-  background-color: green;
   position: absolute;
   z-index: 1;
 }
@@ -98,7 +97,7 @@
 
 @media (min-width: 800px) {
   .bodyWrapper .rockText {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -131,6 +130,20 @@
   -webkit-box-shadow: 5px 5px 5px;
           box-shadow: 5px 5px 5px;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bodyWrapper .rockTypeDiv1::before,
+.bodyWrapper .rockTypeDiv2::before,
+.bodyWrapper .rockTypeDiv3::before {
+  content: '';
+  position: fixed;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #fff000 !important;
 }
 
 .bodyWrapper .rockTypeDiv1:hover .rockText,

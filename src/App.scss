@@ -7,7 +7,7 @@
 
 @mixin font-scale {
   @media (min-width: 800px) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   @media (min-width: 2500px) {
     font-size: 1rem;
@@ -49,6 +49,14 @@
   }
 }
 
+body :hover li{
+  // background: darkcyan;
+}
+
+li body{
+  // background: darkgoldenrod;
+}
+
 .bodyWrapper {
   width: 100%;
   height: 100vh;
@@ -74,7 +82,7 @@
   }
 
   .arrowLi{
-    background-color: green;
+    // background-color: green;
     position: absolute;
     z-index: 1;
   }
@@ -125,6 +133,16 @@
       box-shadow: 5px 5px 5px;
       background-color: rgba($color: #000, $alpha: 0.4);
     }
+
+    &::before{
+      content: '';
+      position: fixed;
+      display: block;
+      top: 0; bottom: 0; left: 0; right: 0;
+      z-index: -1;
+      background-color: #fff000!important;
+    }
+
     &:hover .rockText {
       display: inline;
       text-align: center;
